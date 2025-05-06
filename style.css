@@ -4,10 +4,11 @@
     box-sizing: border-box;
 }
 
-body {
+body.blue-theme {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
+    background-color: #F5F8FA; /* Light blue-gray background for subtle blue theme */
 }
 
 .container {
@@ -17,10 +18,11 @@ body {
 }
 
 header {
-    background: #004080; /* Schneider Electric/Square D blue */
+    background: #004080; /* Square D/Schneider Electric dark blue */
     color: #fff;
     padding: 2rem 0;
     text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header .logo {
@@ -36,6 +38,7 @@ header h1 {
 header h2 {
     font-size: 1.5rem;
     font-weight: normal;
+    color: #E6F0FA; /* Light blue for contrast */
 }
 
 section {
@@ -55,6 +58,7 @@ section .headshot {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border: 3px solid #0078D4; /* Lighter blue border for headshot */
 }
 
 section p {
@@ -62,36 +66,63 @@ section p {
 }
 
 section a {
-    color: #004080;
+    color: #0078D4; /* Lighter blue for links */
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 section a:hover {
+    color: #004080;
     text-decoration: underline;
 }
 
 footer {
-    background: #f4f4f4;
+    background: #004080; /* Dark blue footer */
+    color: #fff;
     text-align: center;
     padding: 1rem 0;
     margin-top: 2rem;
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
-    header .logo {
-        max-width: 120px;
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
     }
-    section .headshot {
+    header .logo {
         max-width: 120px;
     }
     header h1 {
         font-size: 2rem;
     }
     header h2 {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
+    }
+    section .headshot {
+        max-width: 120px;
     }
     section h3 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo {
+        max-width: 100px;
+    }
+    header h1 {
+        font-size: 1.8rem;
+    }
+    header h2 {
+        font-size: 1.1rem;
+    }
+    section .headshot {
+        max-width: 100px;
+    }
+    section h3 {
+        font-size: 1.4rem;
+    }
+    section p {
+        font-size: 0.95rem;
     }
 }
